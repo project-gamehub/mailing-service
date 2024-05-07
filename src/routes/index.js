@@ -1,6 +1,6 @@
 import express from "express";
 import { asyncErrorHandler } from "../errors/errorUtils/index.js";
-import sendMail from "../controllers/sendMail.js";
+import { sendMail, resetPassMail } from "../controllers/index.js";
 import errorMiddleware from "../errors/errorMiddlewares/errorMiddleware.js"
 
 const router = express.Router();
@@ -10,7 +10,7 @@ router.get("/ping", (req, res) => {
 });
 
 router.post("/send-mail", asyncErrorHandler(sendMail));
-
+router.post("/send-reset-pass-mail", asyncErrorHandler(resetPassMail));
 
 router.use(errorMiddleware);
 
