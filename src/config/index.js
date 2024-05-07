@@ -2,5 +2,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const PORT = process.env.PORT;
+const MAILER_CLIENT_ID = process.env.MAILER_CLIENT_ID;
+const MAILER_CLIENT_SECRET = process.env.MAILER_CLIENT_SECRET;
+const MAILER_GMAIL_ADDRESS = process.env.MAILER_GMAIL_ADDRESS;
+const MAILER_REFRESH_TOKEN = process.env.MAILER_REFRESH_TOKEN;
+const NODE_ENV = process.env.NODE_ENV;
 
-export { PORT };
+export { PORT, MAILER_CLIENT_ID, MAILER_CLIENT_SECRET, MAILER_GMAIL_ADDRESS, MAILER_REFRESH_TOKEN, NODE_ENV };
